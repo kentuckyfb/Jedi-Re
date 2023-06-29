@@ -67,62 +67,65 @@ showSlide(currentIndex);
 
 function update() {
   const currentScrollPos = window.pageYOffset;
+  console.log(currentScrollPos);
   if (currentScrollPos > prevScrollPos) {
     animateLinesUp();
   } else if (currentScrollPos < 50) {
     animateLinesDown();
   }
+  
 
-  prevScrollPos = currentScrollPos;
+  // prevScrollPos = currentScrollPos;
+  // var scrollY = window.scrollY;
+  // if (scrollY >= 2100) {
+  //   if (section[5] instanceof HTMLElement) {
+  //     section[5].classList.add("show");
+  //   }
+  // }
+  // else if (scrollY > 1800) {
 
+  //   if (section[4] instanceof HTMLElement) {
+  //     section[4].classList.add("show");
+  //   }
+  // }
+  // else if (scrollY > 1300) {
 
+  //   if (section[3] instanceof HTMLElement) {
+  //     section[3].classList.add("show");
+  //   }
+  // } else if (scrollY > 700) {
+  //   if (section[2] instanceof HTMLElement) {
+  //     section[2].classList.add("show");
+  //   }
+  // }
+  // else if (scrollY >= 300) {
+  //   if (section[1] instanceof HTMLElement) {
+  //     section[1].classList.add("show");
+  //   }
+  // }
 
-  var scrollY = window.scrollY;
-  if (scrollY >= 2100) {
-    if (section[5] instanceof HTMLElement) {
-      section[5].classList.add("show");
-    }
-  }
-  else if (scrollY > 1800) {
+  // if (scrollY < 300) {
+  //   section[1].classList.remove("show");
+  // }
 
-    if (section[4] instanceof HTMLElement) {
-      section[4].classList.add("show");
-    }
-  }
-  else if (scrollY > 1300) {
+  // else if (scrollY < 700) {
+  //   section[2].classList.remove("show");
+  // }
 
-    if (section[3] instanceof HTMLElement) {
-      section[3].classList.add("show");
-    }
-  } else if (scrollY > 700) {
-    if (section[2] instanceof HTMLElement) {
-      section[2].classList.add("show");
-    }
-  }
-  else if (scrollY >= 300) {
-    if (section[1] instanceof HTMLElement) {
-      section[1].classList.add("show");
-    }
-  }
+  // else if (scrollY < 1300) {
+  //   section[3].classList.remove("show");
+  // }
+  // else if (scrollY < 1800) {
+  //   section[4].classList.remove("show");
+  // } else if (scrollY < 2100) {
+  //   section[5].classList.remove("show");
+  // }
 
-  if (scrollY < 300) {
-    section[1].classList.remove("show");
-  }
-
-  else if (scrollY < 700) {
-    section[2].classList.remove("show");
-  }
-
-  else if (scrollY < 1300) {
-    section[3].classList.remove("show");
-  }
-  else if (scrollY < 1800) {
-    section[4].classList.remove("show");
-  } else if (scrollY < 2100) {
-    section[5].classList.remove("show");
-  }
 
 }
+
+
+
 
 function animateLinesUp() {
   const lines = document.querySelectorAll('.vl, .vl1, .vl2');

@@ -20,6 +20,23 @@ body {
   src: url('./public/Fonts/Raleway/static/Raleway-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'freigeist-medium';
+  src: url(public/assets/fonts/freigeist-medium.otf);
+}
+
+@font-face {
+  font-family: 'freigeist-light';
+  src: url(public/assets/fonts/freigeist-light.otf);
+}
+
+@font-face {
+  font-family: 'freigeist-regular';
+  src: url(public/assets/fonts/freigeist-regular.otf);
+}
+
+
+
 @keyframes rotateBackground {
   0% {
     transform: perspective(800px) rotateY(0deg);
@@ -67,7 +84,7 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: 1s all ease-in-out;
 
 }
@@ -520,6 +537,7 @@ section.Bgwhite {
 
 
 #end {
+  color: white;
   font-size: 35px;
   font-family: Dezire;
 }
@@ -788,8 +806,8 @@ div.cards {
   border: 6px solid rgba(60, 0, 0, 0.811);
   ;
   overflow: hidden;
-  margin: 5%;
-  width: 100%;
+  margin: 2%;
+  width: 25vw;
   height: 80%;
   background-color: rgba(0, 0, 0, 0.109);
 }
@@ -798,7 +816,7 @@ div.cards {
   border: 6px solid rgb(115, 0, 0);
   ;
   overflow: hidden;
-  width: 100%;
+  width: 26vw;
   height: 80%;
   box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.64);
   background-color: rgba(255, 255, 255, 0.371);
@@ -1023,11 +1041,185 @@ div.nathan:hover {
   background-image: url("../Display/public/Images/Extras/Paint.jpg");
 }
 
-.hovered {
-  background-color: #81424282;
-
-}
+/* .hovered {
+ 
+} */
 
 .showbox {
   opacity: 1;
+}
+
+
+
+.margin{
+  margin: 50px;
+}
+
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  /* Adjust the gap value as desired */
+  height: 70vh;
+}
+
+.grid-item {
+
+  padding: 20px;
+  text-align: center;
+}
+
+.nested-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  /* Adjust the gap value as desired */
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 1;
+}
+
+
+.nested-grid-item { 
+  position: relative;
+  background-image: url("./public/game-console.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid rgb(150, 45, 45);
+  /* Adjust the background color as desired */
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s all ease-in-out;
+}
+
+
+.nested-grid-item:hover{
+  box-shadow: 0 0 10px rgba(116, 58, 58, 0.87);
+  background-size: 120px;
+}
+
+.info {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+.center {
+  position: relative;
+}
+
+
+.full-screen-element {
+  opacity: 0;
+  position: absolute;
+  top: 5%;
+  /* Adjust the top position as needed */
+  left: 0%;
+  /* Adjust the left position as needed */
+  width: 90%;
+  /* Adjust the width percentage as needed */
+  height: 90%;
+  /* Adjust the height percentage as needed */
+}
+
+
+.element1,
+.element2,
+.element3,
+.element4,
+.element5,
+.element6 {
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid rgb(150, 45, 45);
+}
+
+
+.first-section {
+  position: relative;
+  align-items: start;
+  justify-content: left;
+  width: 40%;
+  margin: 5px;
+
+}
+
+.second-section {
+  width: 50%;
+  margin: 5px;
+  background-image: url("./public/Phone.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.game-title {
+  font-weight: 800;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+
+
+.game-des {
+  font-weight: 400;
+  margin-top: 15px;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.play {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  background-color: aqua;
+  font-weight: 900;
+  border: none;
+  background-color: rgb(197, 103, 103);
+  margin: 0;
+  height: 7vh;
+  width: 7vw;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+
+.desc {
+  font-weight: 200;
+  text-align: left;
+  margin-top: 10px;
+}
+
+
+.show {
+  opacity: 1;
+}
+
+
+
+
+.section-title{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+
+  
 }
