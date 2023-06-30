@@ -20,10 +20,18 @@ var games = document.getElementById('gameP');
 
 
 // Function to show the current slide and hide others
-function showSlide(index) {
+function showSlide(index, right) {
   for (let i = 0; i < slides.length; i++) {
     if (i === index) {
       slides[index].classList.add('show');
+      if(right){
+        slides[index].style.animationName = 'slideInRight';
+      }else{
+        slides[index].style.animationName = 'slideInLeft';
+      }
+      slides[index].style.animationDuration = '0.5s';
+      slides[index].style.animationFillMode = 'forwards';
+
     } else {
       if (slides[i].classList.contains("show")) {
         slides[i].classList.remove('show');
@@ -35,6 +43,7 @@ function showSlide(index) {
 
 
 document.addEventListener('mousemove', function (e) {
+  
   var circle = document.getElementById('circle');
   var x = e.pageX;
   var y = e.pageY;
@@ -48,26 +57,31 @@ document.addEventListener('mousemove', function (e) {
 
 // Event listener for the next button
 LeftBtn.addEventListener('click', () => {
+  
   if (currentIndex < slides.length - 1) {
+
     currentIndex++;
-    showSlide(currentIndex);
+    console.log(currentIndex);
+    showSlide(currentIndex, false);
   }
 });
 
 // Event listener for the previous button
 RightBtn.addEventListener('click', () => {
+
   if (currentIndex > 0) {
+
     currentIndex--;
-    showSlide(currentIndex);
+    console.log(currentIndex);
+    showSlide(currentIndex, true);
   }
 });
 // Show the initial slide
-showSlide(currentIndex);
+showSlide(currentIndex, false);
 
 
 function update() {
   const currentScrollPos = window.pageYOffset;
-  console.log(currentScrollPos);
   if (currentScrollPos > prevScrollPos) {
     animateLinesUp();
   } else if (currentScrollPos < 50) {
@@ -225,3 +239,5 @@ games.addEventListener('mouseleave', function () {
     game.classList.remove('showbox');
   }
 });
+
+
